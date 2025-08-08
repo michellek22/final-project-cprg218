@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+/* --- Navigation --- */
+.navbar {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #888;
+  text-decoration: underline;
+}
+
+.nav-links a:active {
+  color: #aaa;
+  transform: scale(0.98);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- Hero --- */
+.hero {
+  background: url('images/moisturizer.jpg') center/cover no-repeat;
+  height: 60vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero.small {
+  height: 30vh;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+/* --- Sections --- */
+section {
+  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-spacer {
+  height: 3rem;
+}
+
+/* --- Products --- */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 30%;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* --- Video --- */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Accordion (FAQs) --- */
+.accordion-btn {
+  background: #eee;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.accordion-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  display: none;
+}
+
+/* --- About Page --- */
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Lifestyle Cards --- */
+.lifestyle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.lifestyle-card {
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lifestyle-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.lifestyle-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 200px;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    height: auto;
+  }
+}
